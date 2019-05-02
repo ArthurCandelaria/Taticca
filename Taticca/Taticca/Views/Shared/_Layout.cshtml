@@ -1,43 +1,354 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
+    <title>@ViewBag.Title | TATICCA - Auditoria contábil e consultoria tributária para empresas</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <!-- Google Web Font -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lekton:400,700,400italic' rel='stylesheet' type='text/css'>
+    <!--  Bootstrap 3-->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <!-- OWL Carousel -->
+    <link rel="stylesheet" href="~/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/css/owl.theme.css">
+    <!--  Slider -->
+    <link rel="stylesheet" href="~/css/jquery.kenburnsy.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="~/css/animate.css">
+    <!-- Web Icons Font -->
+    <link rel="stylesheet" href="~/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="~/css/iconmoon.css">
+    <link rel="stylesheet" href="~/css/et-line.css">
+    <link rel="stylesheet" href="~/css/ionicons.css">
+    <!-- Magnific PopUp -->
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+    <!-- Tabs -->
+    <link rel="stylesheet" type="text/css" href="~/css/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/tabstyles.css" />
+    <!-- Loader Style -->
+    <link rel="stylesheet" href="~/css/loader-1.css">
+    <!-- Costum Styles -->
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="stylesheet" href="~/css/responsive.css">
+    <!-- Footer -->
+    <link href="~/css/footer.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <!-- Modernizer & Respond js -->
+    <script src="~/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="header">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nome do aplicativo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <div class="logo">
+                <a href="index.html">
+                    <img src="~/img/logo.png" alt="Taticca">
+                    <img class="responsive-logo" style="width: 155px; margin-left: 20px;" src="~/img/logoplus.png" alt="Allinial">
+                </a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
-                </ul>
+            <!-- Menu Hamburger (Default) -->
+            <button class="main-menu-indicator" id="open-button">
+                <span class="line"></span>
+            </button>
+            <div class="menu-wrap" style="background-color: rgb(29, 40, 69,0.95);">
+                <div class="menu-content" style="z-index:initial!important;">
+                    <div class="navigation">
+                        <span class="pe-7s-close close-menu" id="close-button"></span>
+                        <div class="search-wrap js-ui-search">
+                            <input class="js-ui-text" type="text" placeholder="Pesquisar...">
+                            <span class="eks js-ui-close"></span>
+                        </div>
+                    </div>
+                    <nav class="menu">
+                        <div class="menu-list">
+                            <ul>
+                                <li class="menu-item-has-children">
+                                    <a href="#">TATICCA</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html">Equipe TATICCA</a></li>
+                                        <li><a href="index-architecture.html">Escritórios</a></li>
+                                        <li><a href="index-full-slider.html">Firma-Menbros da ALLINIAL GLOBAL</a></li>
+                                        <li><a href="index-full-slider.html">Sobre nós</a></li>
+                                        <li><a href="index-full-slider.html">Setores de Atuação</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">Serviços</a></li>
+                                <li><a href="contact.html">Desafios</a></li>
+                                <li><a href="contact.html">Clientes</a></li>
+                                <li><a href="contact.html">Download Apresentação</a></li>
+                                <li><a href="contact.html">Trabalhe Conosco</a></li>
+                                <li><a href="contact.html">Notícias</a></li>
+                                <li><a href="contact.html">Contato</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--<div class="hidden-xs">
+                        <div class="menu-social-media">
+                            <ul>
+                                <li><a href="#">PORTUGUÊS</i></a></li>
+                                <li><a href="#">EN</a></li>
+                                <!--<li><a href="#"><i class="iconmoon-facebook"></i></a></li>
+                        <li><a href="#"><i class="iconmoon-twitter"></i></a></li>
+                        <li><a href="#"><i class="iconmoon-dribbble3"></i></a></li>
+                        <li><a href="#"><i class="iconmoon-pinterest"></i></a></li>
+                        <li><a href="#"><i class="iconmoon-linkedin2"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>-->
+                </div>
+                <div class="hidden-xs">
+                    <div class="menu-social-media">
+                        <ul>
+                            <li><a href="#">PORTUGUÊS</i></a></li>
+                            <li><a href="#">EN</a></li>
+                            <!--<li><a href="#"><i class="iconmoon-facebook"></i></a></li>
+                            <li><a href="#"><i class="iconmoon-twitter"></i></a></li>
+                            <li><a href="#"><i class="iconmoon-dribbble3"></i></a></li>
+                            <li><a href="#"><i class="iconmoon-pinterest"></i></a></li>
+                            <li><a href="#"><i class="iconmoon-linkedin2"></i></a></li>-->
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <!-- End of Menu Hamburger (Default) -->
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Meu Aplicativo ASP.NET</p>
-        </footer>
-    </div>
+
+    @RenderBody()
+
+    <!-- Footer -->
+    <footer class="page-footer font-small stylish-color-dark pt-4">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-4 mx-auto">
+
+                    <!-- Content -->
+                    <div class="footer-logo">
+                        <img src="/img/logo.png" alt="Taticca">
+                    </div>
+                    <div class="footer-sobre">
+                        <p>
+                            A TATICCA presta serviços de auditoria externa e interna, impostos, consultoria e assessoria empresarial, corporate finance, treinamentos, tecnologia, perícia e investigações, sustentabilidade, mapeamento de riscos e serviços correlatos.
+                        </p>
+                        <p>
+                            Nossa equipe qualificada e experiente, além de possuir mais de 20 anos de experiência de atuação, possui mestres formados no Brasil e no exterior.
+                        </p>
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-2 mx-auto">
+
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 4</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-2 mx-auto">
+
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 4</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-2 mx-auto">
+
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 4</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        
+
+        <!-- Call to action 
+        <ul class="list-unstyled list-inline text-center py-2">
+            <li class="list-inline-item">
+                <h5 class="mb-1">Register for free</h5>
+            </li>
+            <li class="list-inline-item">
+                <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+            </li>
+        </ul>
+        Call to action -->
+
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+                <a href="https://www.facebook.com/pg/Taticca-Allinial-Global-1684142995190034/about/" class="btn-floating btn-fb mx-1">
+                    <i class="fab fa-facebook-f"> </i>
+                </a>
+            </li>
+            @*<li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1">
+                    <i class="fab fa-twitter"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-gplus mx-1">
+                    <i class="fab fa-google-plus-g"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-li mx-1">
+                    <i class="fab fa-linkedin-in"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-dribbble mx-1">
+                    <i class="fab fa-dribbble"> </i>
+                </a>
+            </li>*@
+        </ul>
+        <!-- Social buttons -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            Copyright © 2019 TATICCA By Cantec Soluções Web 
+            <a href="http://www.cantecweb.com.br/"> Criação de Sites</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    @*<div class="footer margin-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-4 col-xs-12">
+                        <div class="footer-inner">
+                            <div class="footer-content">
+                                <h4>O.A.K THEME</h4>
+                                <address>City 35 AM <br>Street 1395 p.n <br>your Country</address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-push-8 col-sm-4 col-xs-12">
+                        <div class="footer-inner">
+                            <div class="footer-content">
+                                <h4>CONTACT INFO</h4>
+                                <p>
+                                    T:003 124 115 <br>
+                                    E:info@mail.com <br>
+                                    W:www.website.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-inner">
+                            <div class="footer-content">
+                                <ul class="social-media">
+                                    <li><a href="#"><i class="iconmoon-facebook"></i></a></li>
+                                    <li><a href="#"><i class="iconmoon-twitter"></i></a></li>
+                                    <li><a href="#"><i class="iconmoon-flickr2"></i></a></li>
+                                    <li><a href="#"><i class="iconmoon-dribbble3"></i></a></li>
+                                    <li><a href="#"><i class="iconmoon-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="iconmoon-linkedin2"></i></a></li>
+                                </ul>
+                                <span class="copyright-mark">&copy; 2015 OAK, ALL RIGHTS RESERVED</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <a href="javascript:void(0)" class="scroll-top" id="scroll-top"><i class="pe-7s-angle-up"></i></a>
+    <script src="~/js/vendor/jquery-1.11.2.min.js"></script>
+    <script data-pace-options='{ "ajax": false }' src="~/js/vendor/pace.min.js"></script>
+    <script src="~/js/vendor/bootstrap.min.js"></script>
+    <script src="~/js/vendor/classie.js"></script>
+    <script src="~/js/vendor/isotope.pkgd.min.js"></script>
+    <script src="~/js/vendor/jquery.velocity.min.js"></script>
+    <script src="~/js/vendor/jquery.kenburnsy.min.js"></script>
+    <script src="~/js/vendor/textslide.js"></script>
+    <script src="~/js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="~/js/vendor/tabs.js"></script>
+    <script src="~/js/ef-slider.js"></script>
+    <script src="~/js/vendor/owl.carousel.min.js"></script>
+    <script src="~/js/vendor/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/vendor/jquery.social-buttons.min.js"></script>
+    <script src="~/js/vendor/wow.min.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/ajax.js"></script>
+    @*<script src="~/js/vendor/jquery-3.3.1.slim.min.js"></script>
+        <script src="~/js/vendor/bootstrap.bundle.min.js"></script>*@
+
 </body>
 </html>
